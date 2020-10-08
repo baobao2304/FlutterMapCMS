@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_cms/screen/SetupProfile/SetupProfile.dart';
+import 'package:flutter_app_cms/screen/chatbox/home_screen.dart';
 import 'package:flutter_app_cms/screen/demotesst.dart';
 import 'package:flutter_app_cms/screen/login/Login.dart';
+import 'package:flutter_app_cms/screen/login/LoginFirebase.dart';
 import 'package:flutter_app_cms/screen/mappage/MapGisHcm.dart';
 import 'package:flutter_app_cms/screen/mappage/MapGoogle.dart';
 import 'package:flutter_app_cms/screen/mappage/MapList.dart';
@@ -15,7 +18,9 @@ import 'package:flutter_app_cms/screen/details/Details.dart';
 //   runApp(MaterialApp(home: HomePage()));
 // }
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MainApp());
 }
 
@@ -26,7 +31,9 @@ class MainApp extends StatelessWidget {
       initialRoute: '/home',
       routes: {
         '/home': (context) => HomePage(),
+        '/homemessenger': (context) => HomeScreen(),
         '/login': (context) => LoginPage(),
+        '/loginfirebase': (context) => LoginFirebasePage(),
         '/register': (context) => RegisterPage(),
         '/details': (context) => DetailsPage(),
         '/stprofile': (context) => SetupProfile(),

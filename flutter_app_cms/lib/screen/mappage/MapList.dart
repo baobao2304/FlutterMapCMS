@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_cms/card_template/CardMaps_List.dart';
+import 'package:flutter_app_cms/widget/CardMaps_List.dart';
 import 'package:flutter_app_cms/model/MapModel.dart';
 
 class MapListPage extends StatefulWidget {

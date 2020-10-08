@@ -93,7 +93,7 @@ class _MapGoogleState extends State<MapGoogle> {
               title: "San Francsico", snippet: "An Interesting city"),
           icon: _markerIcon));
     });
-    _toggleMapStyle();
+    // _toggleMapStyle();
   }
 
   @override
